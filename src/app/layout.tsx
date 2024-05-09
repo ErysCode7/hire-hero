@@ -3,6 +3,11 @@ import { Inter as FontSans } from "next/font/google";
 
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
+import { ThemeProvider } from "@/providers/theme-provider";
+import { TailwindIndicator } from "@/utils/tailwind-indicator";
+import { Toaster } from "@/components/ui/sonner";
+import NavigationBar from "@/components/nav-bar";
+import { Footer } from "@/components/footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -22,7 +27,18 @@ const RootLayout = ({
   return (
     <html lang="en">
       <body className={cn("font-sans antialiased", fontSans.variable)}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NavigationBar />
+          {children}
+          {/* <Footer /> */}
+          <Toaster />
+          <TailwindIndicator />
+        </ThemeProvider>
       </body>
     </html>
   );
