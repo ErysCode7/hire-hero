@@ -6,7 +6,7 @@ export const TailwindIndicator = () => {
   if (!TAILWIND_INDICATOR) return null
 
   return (
-    <div className="fixed bottom-1 left-1 flex h-6 w-6 items-center justify-center rounded-full bg-kol-primary p-3 font-mono text-xs text-white z-[9999] bg-red-500">
+    <div className="bg-kol-primary fixed bottom-1 left-1 z-[9999] flex h-6 w-6 items-center justify-center rounded-full bg-red-500 p-3 font-mono text-xs text-white">
       <div className="block sm:hidden">xs</div>
       <div className="hidden sm:block md:hidden">sm</div>
       <div className="hidden md:block lg:hidden">md</div>

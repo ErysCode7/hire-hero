@@ -95,14 +95,14 @@ const HomePage = () => {
     <MaxWidthWrapper className="pt-[50px]">
       <TracingBeam>
         <div className="flex items-center justify-between gap-5">
-          <div className="flex flex-col items-center justify-center flex-1">
+          <div className="flex flex-1 flex-col items-center justify-center">
             <TypewriterEffect words={words} />
-            <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+            <p className="mx-auto mt-2 max-w-md text-center text-base font-normal text-neutral-700 dark:text-neutral-200 md:text-lg">
               Explore countless opportunities on our platform!
             </p>
-            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
-              <SignUpButton className="w-32 h-10" />
-              <LoginButton className="w-32 h-10 " />
+            <div className="mt-10 flex flex-col space-x-0 space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+              <SignUpButton className="h-10 w-32" />
+              <LoginButton className="h-10 w-32 " />
             </div>
           </div>
           <div className="flex-1">

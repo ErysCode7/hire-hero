@@ -12,8 +12,8 @@ const World = dynamic(() => import('./globe').then((m) => m.World), {
 
 const GlobeComponent = () => {
   return (
-    <div className="flex flex-row items-center justify-center py-20 md:h-auto dark:transparent bg-transparent relative">
-      <div className="w-full relative overflow-hidden h-full md:h-[40rem]">
+    <div className="dark:transparent relative flex flex-row items-center justify-center bg-transparent py-20 md:h-auto">
+      <div className="relative h-full w-full overflow-hidden md:h-[40rem]">
         <motion.div
           initial={{
             opacity: 0,
@@ -28,14 +28,14 @@ const GlobeComponent = () => {
           }}
           className="div"
         >
-          <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
+          <h2 className="text-center text-xl font-bold text-black dark:text-white md:text-4xl">
             Connect with People
           </h2>
-          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+          <p className="mx-auto mt-2 max-w-md text-center text-base font-normal text-neutral-700 dark:text-neutral-200 md:text-lg">
             Explore countless opportunities on our platform!
           </p>
         </motion.div>
-        <div className="w-full h-72 md:h-full z-10">
+        <div className="z-10 h-72 w-full md:h-full">
           <World data={sampleArcs} globeConfig={globeConfig} />;
         </div>
       </div>

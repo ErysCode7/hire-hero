@@ -11,8 +11,8 @@ import SignUpButton from './sign-up-button'
 
 const NavigationBar = () => {
   return (
-    <nav className="h-20 fixed top-0 bg-white dark:bg-transparent right-0 left-0 z-50 shadow-sm">
-      <MaxWidthWrapper className="flex items-center justify-between h-full">
+    <nav className="fixed left-0 right-0 top-0 z-50 h-20 bg-white shadow-sm dark:bg-transparent">
+      <MaxWidthWrapper className="flex h-full items-center justify-between">
         <Link href="/">
           <Image src="/next.svg" width={80} height={80} alt="logo" />
         </Link>

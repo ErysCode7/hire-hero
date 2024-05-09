@@ -32,26 +32,26 @@ const SeekerOrSpecialist = ({
   }
 
   return (
-    <MaxWidthWrapper className="pt-40 flex flex-col items-center justify-center">
+    <MaxWidthWrapper className="flex flex-col items-center justify-center pt-40">
       <h1 className="text-4xl font-semibold">
         Join as a {seekerRole} or {specialistRole}
       </h1>
 
-      <div className="flex justify-center items-center gap-5 w-full py-10">
+      <div className="flex w-full items-center justify-center gap-5 py-10">
         <Card
           className={cn(
-            'relative h-64 flex items-center justify-center md:cursor-pointer',
+            'relative flex h-64 items-center justify-center md:cursor-pointer',
             {
               'border-gray-950 dark:border-blue-500': role === USER_ROLE.SEEKER,
             },
           )}
           onClick={() => handleSetRole('SEEKER')}
         >
-          <CardHeader className="absolute top-0 left-0">
+          <CardHeader className="absolute left-0 top-0">
             <Image src="/vercel.svg" alt="seeker" width={100} height={100} />
           </CardHeader>
           <CardContent>
-            <h4 className="text-black dark:text-white text-xl font-medium">
+            <h4 className="text-xl font-medium text-black dark:text-white">
               Im a Seeker, looking for Specialist
             </h4>
           </CardContent>
@@ -59,7 +59,7 @@ const SeekerOrSpecialist = ({
 
         <Card
           className={cn(
-            'relative h-64 flex items-center justify-center md:cursor-pointer',
+            'relative flex h-64 items-center justify-center md:cursor-pointer',
             {
               'border-gray-950 dark:border-blue-500':
                 role === USER_ROLE.SPECIALIST,
@@ -67,11 +67,11 @@ const SeekerOrSpecialist = ({
           )}
           onClick={() => handleSetRole('SPECIALIST')}
         >
-          <CardHeader className="absolute top-0 left-0">
+          <CardHeader className="absolute left-0 top-0">
             <Image src="/vercel.svg" alt="seeker" width={100} height={100} />
           </CardHeader>
           <CardContent>
-            <h4 className="text-black dark:text-white text-xl font-medium">
+            <h4 className="text-xl font-medium text-black dark:text-white">
               Im a Specialist, looking for Seeker
             </h4>
           </CardContent>
