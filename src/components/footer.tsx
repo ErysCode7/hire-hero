@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export const Footer = () => {
-  const date = new Date();
-  const yearNow = date.getFullYear();
+  const date = new Date()
+  const yearNow = date.getFullYear()
 
   return (
     <footer className="bg-gray-100 p-6 md:py-12 w-full dark:bg-transparent">
@@ -23,5 +23,5 @@ export const Footer = () => {
         </nav>
       </div>
     </footer>
-  );
-};
+  )
+}

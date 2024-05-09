@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
 import {
   motion,
@@ -9,51 +9,51 @@ import {
   useTransform,
   useSpring,
   MotionValue,
-} from "framer-motion";
+} from 'framer-motion'
 
 export const HeroParallax = ({
   products,
 }: {
   products: {
-    title: string;
-    thumbnail: string;
-  }[];
+    title: string
+    thumbnail: string
+  }[]
 }) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
-  const ref = React.useRef(null);
+  const firstRow = products.slice(0, 5)
+  const secondRow = products.slice(5, 10)
+  const thirdRow = products.slice(10, 15)
+  const ref = React.useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
-  });
+    offset: ['start start', 'end start'],
+  })
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  const springConfig = { stiffness: 300, damping: 30, bounce: 100 }
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig
-  );
+    springConfig,
+  )
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig
-  );
+    springConfig,
+  )
   const rotateX = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
-  );
+    springConfig,
+  )
   const opacity = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig
-  );
+    springConfig,
+  )
   const rotateZ = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig
-  );
+    springConfig,
+  )
   const translateY = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    springConfig
-  );
+    springConfig,
+  )
   return (
     <div
       ref={ref}
@@ -98,8 +98,8 @@ export const HeroParallax = ({
         </motion.div>
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
 const Header = () => {
   return (
@@ -113,18 +113,18 @@ const Header = () => {
         amazing products.
       </p>
     </div>
-  );
-};
+  )
+}
 
 const ProductCard = ({
   product,
   translate,
 }: {
   product: {
-    title: string;
-    thumbnail: string;
-  };
-  translate: MotionValue<number>;
+    title: string
+    thumbnail: string
+  }
+  translate: MotionValue<number>
 }) => {
   return (
     <motion.div
@@ -151,5 +151,5 @@ const ProductCard = ({
         {product.title}
       </h2>
     </motion.div>
-  );
-};
+  )
+}

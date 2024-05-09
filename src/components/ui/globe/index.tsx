@@ -1,14 +1,14 @@
-"use client";
+'use client'
 
-import React from "react";
-import dynamic from "next/dynamic";
+import React from 'react'
+import dynamic from 'next/dynamic'
 
-import { motion } from "framer-motion";
-import { sampleArcs, globeConfig } from "./config";
+import { motion } from 'framer-motion'
+import { sampleArcs, globeConfig } from './config'
 
-const World = dynamic(() => import("./globe").then((m) => m.World), {
+const World = dynamic(() => import('./globe').then((m) => m.World), {
   ssr: false,
-});
+})
 
 const GlobeComponent = () => {
   return (
@@ -40,7 +40,7 @@ const GlobeComponent = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default GlobeComponent;
+export default GlobeComponent

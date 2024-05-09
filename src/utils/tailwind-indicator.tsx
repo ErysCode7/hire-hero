@@ -1,9 +1,9 @@
-import { featureToggle } from "./feature-toggle";
+import { featureToggle } from './feature-toggle'
 
-const { TAILWIND_INDICATOR } = featureToggle;
+const { TAILWIND_INDICATOR } = featureToggle
 
 export const TailwindIndicator = () => {
-  if (!TAILWIND_INDICATOR) return null;
+  if (!TAILWIND_INDICATOR) return null
 
   return (
     <div className="fixed bottom-1 left-1 flex h-6 w-6 items-center justify-center rounded-full bg-kol-primary p-3 font-mono text-xs text-white z-[9999] bg-red-500">
@@ -14,5 +14,5 @@ export const TailwindIndicator = () => {
       <div className="hidden xl:block 2xl:hidden">xl</div>
       <div className="hidden 2xl:block">2xl</div>
     </div>
-  );
-};
+  )
+}

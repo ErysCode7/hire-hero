@@ -1,24 +1,24 @@
-"use client";
+'use client'
 
-import { useRouter } from "next/navigation";
-import { Button } from "./ui/button";
+import { useRouter } from 'next/navigation'
+import { Button } from './ui/button'
 
 type LoginButtonProps = {
-  className?: string;
-};
+  className?: string
+}
 
 const LoginButton = ({ className }: LoginButtonProps) => {
-  const router = useRouter();
+  const router = useRouter()
 
   const redirectToLoginPage = () => {
-    router.push("/auth/login");
-  };
+    router.push('/auth/login')
+  }
 
   return (
     <Button type="button" className={className} onClick={redirectToLoginPage}>
       Login
     </Button>
-  );
-};
+  )
+}
 
-export default LoginButton;
+export default LoginButton

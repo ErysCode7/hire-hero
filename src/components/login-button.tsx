@@ -1,18 +1,18 @@
-"use client";
+'use client'
 
-import { useRouter } from "next/navigation";
-import { Button } from "./ui/button";
+import { useRouter } from 'next/navigation'
+import { Button } from './ui/button'
 
 type SignUpButtonProps = {
-  className?: string;
-};
+  className?: string
+}
 
 const SignUpButton = ({ className }: SignUpButtonProps) => {
-  const router = useRouter();
+  const router = useRouter()
 
   const redirectToSignUpPage = () => {
-    router.push("/auth/sign-up");
-  };
+    router.push('/auth/sign-up')
+  }
 
   return (
     <Button
@@ -23,7 +23,7 @@ const SignUpButton = ({ className }: SignUpButtonProps) => {
     >
       Sign Up
     </Button>
-  );
-};
+  )
+}
 
-export default SignUpButton;
+export default SignUpButton

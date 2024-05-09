@@ -1,13 +1,13 @@
-"use client";
+'use client'
 
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { ModeToggle } from "./ui/mode-toggle";
-import MaxWidthWrapper from "./max-width-wrapper";
-import LoginButton from "./login-button";
-import SignUpButton from "./sign-up-button";
+import { ModeToggle } from './ui/mode-toggle'
+import MaxWidthWrapper from './max-width-wrapper'
+import LoginButton from './login-button'
+import SignUpButton from './sign-up-button'
 
 const NavigationBar = () => {
   return (
@@ -25,7 +25,7 @@ const NavigationBar = () => {
         </div>
       </MaxWidthWrapper>
     </nav>
-  );
-};
+  )
+}
 
-export default NavigationBar;
+export default NavigationBar
