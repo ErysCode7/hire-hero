@@ -6,8 +6,8 @@ import Link from 'next/link'
 
 import { ModeToggle } from './ui/mode-toggle'
 import MaxWidthWrapper from './max-width-wrapper'
-import LoginButton from './login-button'
 import SignUpButton from './sign-up-button'
+import LoginButton from './login-button'
 
 const NavigationBar = () => {
   return (
@@ -18,8 +18,8 @@ const NavigationBar = () => {
         </Link>
         <div className="flex items-center gap-10">
           <div className="flex items-center gap-5">
-            <SignUpButton className="w-24" />
             <LoginButton className="w-24" />
+            <SignUpButton className="w-24" />
           </div>
           <ModeToggle />
         </div>

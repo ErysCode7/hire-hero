@@ -3,27 +3,22 @@
 import { useRouter } from 'next/navigation'
 import { Button } from './ui/button'
 
-type SignUpButtonProps = {
+type LoginButtonProps = {
   className?: string
 }
 
-const SignUpButton = ({ className }: SignUpButtonProps) => {
+const LoginButton = ({ className }: LoginButtonProps) => {
   const router = useRouter()
 
-  const redirectToSignUpPage = () => {
-    router.push('/auth/sign-up')
+  const redirectToLoginPage = () => {
+    router.push('/auth/login')
   }
 
   return (
-    <Button
-      type="button"
-      variant="secondary"
-      className={className}
-      onClick={redirectToSignUpPage}
-    >
-      Sign Up
+    <Button type="button" className={className} onClick={redirectToLoginPage}>
+      Log in
     </Button>
   )
 }
 
-export default SignUpButton
+export default LoginButton

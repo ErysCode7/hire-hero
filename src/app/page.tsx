@@ -1,33 +1,15 @@
-import LoginButton from '@/components/login-button'
-import MaxWidthWrapper from '@/components/max-width-wrapper'
 import SignUpButton from '@/components/sign-up-button'
+import MaxWidthWrapper from '@/components/max-width-wrapper'
+import LoginButton from '@/components/login-button'
 import GlobeComponent from '@/components/ui/globe'
 import { HeroParallax } from '@/components/ui/hero-parallax'
 import { TracingBeam } from '@/components/ui/tracing-beam'
 import { TypewriterEffect } from '@/components/ui/typewriter-effect'
 
-import React from 'react'
+import Image from 'next/image'
+import { BentoGridThirdDemo } from '@/components/ui/grid/grid'
 
 const HomePage = () => {
-  const words = [
-    {
-      text: 'Connect',
-    },
-    {
-      text: 'with',
-    },
-    {
-      text: 'People',
-    },
-    {
-      text: 'through',
-    },
-    {
-      text: 'Hire Hero',
-      className: 'text-blue-500 dark:text-blue-500',
-    },
-  ]
-
   const products = [
     {
       title: 'Product 1',
@@ -92,26 +74,34 @@ const HomePage = () => {
   ]
 
   return (
-    <MaxWidthWrapper className="pt-[50px]">
-      <TracingBeam>
-        <div className="flex items-center justify-between gap-5">
-          <div className="flex flex-1 flex-col items-center justify-center">
-            <TypewriterEffect words={words} />
-            <p className="mx-auto mt-2 max-w-md text-center text-base font-normal text-neutral-700 dark:text-neutral-200 md:text-lg">
-              Explore countless opportunities on our platform!
-            </p>
-            <div className="mt-10 flex flex-col space-x-0 space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-              <SignUpButton className="h-10 w-32" />
-              <LoginButton className="h-10 w-32 " />
+    <>
+      <MaxWidthWrapper>
+        <TracingBeam>
+          {/* HERO SECTION */}
+          <div className="flex h-[calc(100vh_-_80px)] items-center justify-center gap-5 bg-cover bg-center bg-no-repeat">
+            <div className="flex flex-1 flex-col items-center gap-8">
+              <div className="flex flex-col gap-4">
+                <h1 className="text-center text-6xl font-bold text-[#14181f] dark:text-white">
+                  Connect with <span className="text-blue-500">HireHero</span>{' '}
+                </h1>
+                <p className="mx-auto max-w-md text-base font-normal text-neutral-700 dark:text-neutral-200 md:text-lg">
+                  Explore countless opportunities on our platform!
+                </p>
+              </div>
+              <div className="flex flex-col space-x-0 space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+                <LoginButton className="h-10 w-28" />
+                <SignUpButton className="h-10 w-28" />
+              </div>
+            </div>
+            <div className="flex-1">
+              <GlobeComponent />
             </div>
           </div>
-          <div className="flex-1">
-            <GlobeComponent />
-          </div>
-        </div>
-        <HeroParallax products={products} />
-      </TracingBeam>
-    </MaxWidthWrapper>
+        </TracingBeam>
+      </MaxWidthWrapper>
+      <HeroParallax products={products} />
+      <BentoGridThirdDemo />
+    </>
   )
 }
 
